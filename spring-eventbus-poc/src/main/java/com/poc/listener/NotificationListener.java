@@ -3,7 +3,7 @@ package com.poc.listener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.poc.doman.NotificationData;
+import com.poc.domain.NotificationData;
 import com.poc.service.NotificationService;
 
 import reactor.bus.Event;

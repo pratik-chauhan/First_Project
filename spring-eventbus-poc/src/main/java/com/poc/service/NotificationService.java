@@ -1,6 +1,6 @@
 package com.poc.service;
 
-import com.poc.doman.NotificationData;
+import com.poc.domain.NotificationData;
 
 public interface NotificationService {
 

@@ -1,4 +1,4 @@
-package com.poc.doman;
+package com.poc.domain;
 
 public class NotificationData {
 

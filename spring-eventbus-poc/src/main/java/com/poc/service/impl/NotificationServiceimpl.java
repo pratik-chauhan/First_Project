@@ -2,7 +2,7 @@ package com.poc.service.impl;
 
 import org.springframework.stereotype.Service;
 
-import com.poc.doman.NotificationData;
+import com.poc.domain.NotificationData;
 import com.poc.service.NotificationService;
 
 @Service

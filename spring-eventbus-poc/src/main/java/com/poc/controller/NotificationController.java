@@ -4,8 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.poc.doman.NotificationData;
+import com.poc.domain.NotificationData;
 
 import reactor.bus.Event;
 import reactor.bus.EventBus;
@@ -17,7 +18,7 @@ public class NotificationController {
     private EventBus eventBus;
 
     @GetMapping("/startNotification/{param}")
-    public void startNotification(@PathVariable Integer param) {
+    public @ResponseBody String startNotification(@PathVariable Integer param) {
 
         for (int i = 0; i < param; i++) {
 
@@ -28,8 +29,9 @@ public class NotificationController {
             eventBus.notify("printListener", Event.wrap(data)); // publish it to listener
 
             System.out.println("Notification " + i + ": notification task submitted successfully");
+            
         }
-
+		return "Notification started.";
     }
 
 }
