@@ -7,7 +7,7 @@ import com.poc.customstarter.service.DefaultMessageService;
 import com.poc.customstarter.service.MessageService;
 
 @Configuration
-public class EventAutoConfiguration {
+public class CustomMessageAutoConfiguration {
 
    @Bean	
    public MessageService messageService() {
